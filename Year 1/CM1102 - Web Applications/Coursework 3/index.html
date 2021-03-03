@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title>Payment form</title>
+	<link rel="stylesheet" type="text/css" href="design.css">
+	<script type="text/javascript"> 
+		<!--
+
+		function verify(formfield){
+			var errormsg = "";
+			if(isNaN(formfield.cardnumber.value) || formfield.cardnumber.value.length != 16){
+				errormsg += "Please enter correct card number \n";
+			}
+			if(formfield.cardname.value ==  ""){
+				errormsg += "Please enter the card holder's name \n";
+			}
+			if(formfield.expirationmonth.value ==  "" || formfield.expirationyear.value == ""){
+				errormsg += "Please enter the expiration date \n";
+			}
+			if(formfield.expirationmonth.value < 1 || formfield.expirationmonth.value > 12){
+				errormsg += "Please enter a correct month \n";
+			}
+			if(formfield.expirationyear.value < 2018){
+				errormsg += "Please enter a correct year \n";
+			}
+			if(isNaN(formfield.securitycode.value) || formfield.securitycode.value.length != 3){
+				errormsg += "Please enter a valid security code";
+			}
+			if(!errormsg== ""){
+				alert(errormsg);
+				return false;
+			}
+			alert("Your payment was succesfull!");
+		}
+
+		function gethelp(selection){
+			switch(selection.name){
+				case "cardnumber":
+					document.getElementById("help").innerHTML = "Enter a 16 digit number on your card";
+					break;
+				case "expirationmonth":
+					document.getElementById("help").innerHTML = "Enter the expiration month on your card in the MM format";
+					break;
+				case "expirationyear":
+					document.getElementById("help").innerHTML = "Enter the expiration year on your card in the YYYY format";
+					break;
+				case "cardname":
+					document.getElementById("help").innerHTML = "Enter the card holder's name";
+					break;
+				case "securitycode":
+					document.getElementById("help").innerHTML = "Enter the CVV (security code). Usually found on the back of the card";
+					break;
+			}
+		}
+
+		//-->
+	</script>
+	<noscript>
+		JavaScript is not enabled
+	</noscript>
+</head>
+<body>
+	<h1>Card Details</h1>
+	<form class="formfield" onsubmit="verify(this)" name="cardFm">
+		<input id="formarea" type="text" name="cardnumber" placeholder="Card Number" onfocus="gethelp(this)">
+		<input id="formarea" type="text" name="expirationmonth" placeholder="MM" onfocus="gethelp(this)">
+		<input id="formarea" type="text" name="expirationyear" placeholder="YYYY" onfocus="gethelp(this)"> <br>
+		<input id="formarea" type="text" name="cardname" placeholder="Name on the Card" onfocus="gethelp(this)">
+		<input id="formarea" type="text" name="securitycode" placeholder="CVV" onfocus="gethelp(this)"> <br>
+		<input id="button" type="submit" name="submitbutton" value="Submit">
+		<input id="button" type="reset" name="resetbutton" value="Clear the form">
+	</form>	
+	<textarea id="help" readonly>
+		
+	</textarea>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Pepik, 12463737, Bio, 78, 6, Bobik, Prdik, 15700
+Micheal, 463022, Medic, 3, 67a, Gordon Road, Malibu, FR573
+Zadek Obecny, C12943343, International Relations, 4444, 20, Za Prdelkou, Pod Skalou, 44HJ*
+Ondy, 1731713, CompSci, CM10020, , Richmond, Cardiff, h

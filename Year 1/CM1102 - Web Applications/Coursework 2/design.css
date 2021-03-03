@@ -1,0 +1,14 @@
+body{
+	font-family: georgia, sans-serif;
+	}
+
+h2 {
+	font-size: 48px;
+	background-color: limegreen;
+	text-align: center;
+	margin: 0px;
+	padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+	}

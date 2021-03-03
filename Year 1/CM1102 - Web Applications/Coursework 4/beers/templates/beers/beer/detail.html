@@ -1,0 +1,29 @@
+{% extends "beers/base.html" %}
+{% load static %}
+
+{% block title %}
+    {{ beer.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="beer-detail">
+        <img src="{% if beer.image %}{{ beer.image.url }}{% else %}{% static "beers/img/no_image.png" %}{% endif %}">
+        <h1>{{ beer.title }}</h1>
+        <h2><a href="{{ beer.style.get_absolute_url }}">{{ beer.style }}</a></h2>
+        <p class="price">Price: £{{ beer.price }}</p>
+        Description: {{ beer.description|linebreaks }}
+
+        <!-- BEGIN Addition of the 'ADD TO CART' functionality -->
+		<form action="{% url "cart:cart_add" beer.id %}" method="post">
+            {{ cart_beer_form }}
+            {% csrf_token %}
+            <input type="submit" value="Add to cart">
+        </form>
+		<!-- END Addition of the 'ADD TO CART' functionality -->
+    </div>
+
+{% endblock %}
+
+        
+        
+        

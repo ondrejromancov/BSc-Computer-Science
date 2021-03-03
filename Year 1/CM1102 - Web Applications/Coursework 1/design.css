@@ -1,0 +1,110 @@
+body{
+	font-family: georgia, sans-serif;
+	}
+
+h1 {
+	font-size: 48px;
+	background-color: limegreen;
+	text-align: center;
+	margin: 0px;
+	padding: 20px;
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+	}
+
+nav ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+	}
+
+nav ul li{
+	display: inline;
+	float: left;
+	}
+
+nav ul li a{
+	display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+nav ul li a:active{ 
+	background-color: limegreen;
+}
+
+ol li{
+	font-size: 20px;
+}
+
+div.headerblock{
+	padding: 70px;
+	width: 100%;
+}
+
+img.rightside{
+	float: right;
+}
+
+img.leftside{
+	float: left;
+	margin-right: 20px;
+}
+
+img.leftsidespecial{
+	float: left;
+	margin-right: 40px;
+}
+
+
+p{
+	font-size: 20px;
+}
+
+.references{
+	font-size: 14px;
+}
+
+table.info{
+	margin-top: 60px;
+	margin-bottom: 105px;
+	margin-left: 130px;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+
+table.info, th, td{
+	border: 2px solid black;
+}
+
+table.achievements{
+	margin-top: 80px;
+	margin-bottom: 130px;
+	margin-left: 130px;
+	border-collapse: collapse;
+	font-size: 20px;
+}
+
+table.achievements, th, td{
+	border: 2px solid black;
+}
+
+
+
+
+
+

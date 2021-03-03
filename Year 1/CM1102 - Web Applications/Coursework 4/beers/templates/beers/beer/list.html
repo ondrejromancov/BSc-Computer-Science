@@ -1,0 +1,38 @@
+{% extends "beers/base.html" %}
+{% load static %}
+
+{% block title %}
+    {% if style %}{{ style.style }}{% else %}Beers{% endif %}
+{% endblock %}
+
+{% block content %}
+    <div id="sidebar">
+        <h3>Beers</h3>
+        <ul>
+            <li {% if not style %}class="selected"{% endif %}>
+                <a href="{% url "beers:beer_list" %}">All</a>
+            </li>
+        {% for s in styles %}
+            <li {% if style.slug == s.slug %}class="selected"{% endif %}>
+                <a href="{{ s.get_absolute_url }}">{{ s.style }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div id="main" class="beer-list">
+        <h1>{% if style %}{{ style.style }}{% else %}Beers{% endif %}</h1>
+        {% for beer in beers %}
+         
+            <div class="item">
+                
+                <a href="{{ beer.get_absolute_url }}">
+                    <img src="{% if beer.image %}{{ beer.image.url }}{% else %}{% static "beers/img/no_image.png" %}{% endif %}">
+                </a><br>
+                <a href="{{ beer.get_absolute_url }}">{{ beer.title }}</a><br>
+                £{{ beer.price }}
+                
+            </div>
+         
+        {% endfor %}
+    </div>
+{% endblock %}
